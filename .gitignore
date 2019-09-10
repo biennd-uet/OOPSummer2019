@@ -1,0 +1,35 @@
+# ignore java compiler file
+
+*.class
+# cache
+
+*.swp
+
+
+# ignore complier file other
+bin/
+bin/*
+*.o
+*.a
+*.lo
+*.oa
+
+# input and output check file
+*.inp
+*.out
+
+# workspace file
+
+*.code-workspace
+
+# vscode configure
+
+.vscode/
+.vscode/*
+.settings/
+.settings/*
+.idea/
+.idea/*
+*.iml
+
+

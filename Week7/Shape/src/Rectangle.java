@@ -13,6 +13,12 @@ public class Rectangle extends Shape {
         this.length = length;
         this.topLeft = new Point(0, 0);
     }
+    public Rectangle(double width, double length, String color, boolean filled) {
+        super(color, filled);
+        this.width = width;
+        this.length = length;
+        this.topLeft = new Point(0, 0);
+    }
     public Rectangle(Point topLeft, double width, double length, String color, boolean filled) {
         super(color, filled);
         this.width = width;

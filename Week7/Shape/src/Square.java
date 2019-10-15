@@ -5,6 +5,9 @@ public class Square extends Rectangle {
     public Square(double side) {
         super(side, side);
     }
+    public Square(double side, String color, boolean filled) {
+        super(side, side, color, filled);
+    }
     public Square(Point topLeft, double side, String color, boolean filled) {
         super(topLeft, side, side, color, filled);
     }
@@ -28,7 +31,10 @@ public class Square extends Rectangle {
         return String.format("Square[topLeft=%s,side=%.1f,color=%s,filled=%b]"
                     , this.topLeft.toString(), this.length, this.color, this.filled);
     }
-
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
     public static void main(String[] args) {
         Double p = -10.0;
         System.out.println(p.hashCode());

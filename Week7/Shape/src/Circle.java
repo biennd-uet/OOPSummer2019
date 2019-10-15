@@ -13,7 +13,11 @@ public class Circle extends Shape {
         this.radius = radius;
         this.center = new Point(0, 0);
     }
-
+    public Circle(double radius, String color, boolean filled) {
+        super(color, filled);
+        this.radius = radius;
+        this.center = new Point(0, 0);
+    }
     public Circle(Point center, double radius, String color, boolean filled) {
         super(color, filled);
         this.radius = radius;

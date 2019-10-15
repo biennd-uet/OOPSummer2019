@@ -23,7 +23,7 @@ public class Layer {
         shapes.removeIf(checkIsCricle);
     }
     public String getInfo() {
-        StringBuilder info = new StringBuilder();
+        StringBuilder info = new StringBuilder("Layer of crazy shapes: \n");
 
         for(Shape shape: shapes) {
             info.append(shape.toString());
@@ -33,16 +33,17 @@ public class Layer {
     }
     public void removeDuplicates() {
         Set<Shape> setShapeContains = new HashSet<Shape>();
-        ArrayList<Shape> listShapeToRemove = new ArrayList<Shape>();
+        ArrayList<Shape> listShapeResult = new ArrayList<Shape>();
 
         for(Shape shape: shapes) {
             if (setShapeContains.contains(shape)) {
-                listShapeToRemove.add(shape);
+
             } else {
                 setShapeContains.add(shape);
+                listShapeResult.add(shape);
             }
         }
-        shapes.removeAll(listShapeToRemove);
+        shapes = listShapeResult;
     }
     public static void main(String[] args) {
         Layer layer = new Layer();
@@ -50,7 +51,7 @@ public class Layer {
         layer.addShape(new Circle());
         layer.addShape(new Circle());
         System.out.println(layer.getInfo());
-        layer.removeCircles();
+        layer.removeDuplicates();
         System.out.println(layer.getInfo());
     }
 }

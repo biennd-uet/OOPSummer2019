@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testFXML.SampleController">
+   <children>
+      <GridPane alignment="CENTER" hgap="10.0" stylesheets="@login.css" vgap="10.0">
+         <padding>
+            <Insets bottom="10.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+         <children>
+            <Text id="welcome-text" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" GridPane.columnSpan="2" />
+            <Label text="User Name:" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Password:" GridPane.rowIndex="2" />
+            <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <HBox alignment="BOTTOM_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleSubmitButtonAction" text="Sign In" />
+               </children>
+            </HBox>
+            <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>
